@@ -1,11 +1,29 @@
-import { Navigate } from "react-router-dom";
+
+
+import { useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import { useAuth } from "../context/AuthContext";
-import type { JSX } from "react";
 
-const Privateroute = ({children}: {children: JSX.Element}) => {
-    const {user} = useAuth();
-
-  return user ? children : <Navigate to='/login' replace />
+interface PrivateRouteProps {
+  children: React.ReactNode;
 }
 
-export default Privateroute
+const PrivateRoute = ({ children }: PrivateRouteProps) => {
+  const { user } = useAuth();
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    if (!user) {
+      navigate("/login");
+    }
+  }, [user, navigate]);
+
+  // While checking auth, don't render children yet
+  if (!user) {
+    return null; // or a loading spinner
+  }
+
+  return <>{children}</>;
+};
+
+export default PrivateRoute;
