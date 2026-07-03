@@ -1,4 +1,4 @@
-import UploadArea from './UploadArea';
+import Chat from './Chat';
 
 
 
@@ -7,8 +7,7 @@ const HomeTab = () => {
     <div>
       <h2 className="text-2xl font-bold text-[#0E2E2E] mb-6">Upload Documents</h2>
       
-      <UploadArea 
-      />
+     <Chat />
       
     </div>
   );

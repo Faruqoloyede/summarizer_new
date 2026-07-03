@@ -23,7 +23,7 @@ const handleLogout = async ()=>{
 }
   return (
     <>
-    <div className='bg-[#0E2E2E] text-white shadow-md transition-all duration-300 relative w-72 sm:block hidden'>
+    <div className='bg-[#0E2E2E] text-white shadow-md transition-all duration-300 fixed top-10 h-screen w-72 sm:block hidden'>
      <nav className="mt-6">
   {nav_links.map((link) => (
     <NavLink

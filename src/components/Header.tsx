@@ -8,7 +8,7 @@ interface SidebarProps {
 }
 const Header = ({ sidebarOpen, setSidebarOpen }: SidebarProps) => {
   return (
-    <nav className='flex items-center justify-between bg-[#0E2E2E] p-4 shadow-md transition-all duration-300 relative'>
+    <nav className='flex fixed left-0 w-full items-center justify-between bg-[#0E2E2E] p-4 shadow-md transition-all duration-300'>
         <div className='flex items-center justify-between gap-x-3'>
             <button 
                       onClick={() => setSidebarOpen(!sidebarOpen)}
