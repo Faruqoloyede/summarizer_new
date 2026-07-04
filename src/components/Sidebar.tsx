@@ -57,7 +57,7 @@ const handleLogout = async ()=>{
     </div>
 
       {sidebarOpen && (
-         <div className='bg-[#0E2E2E] text-white shadow-md transition-all duration-300 relative w-64 z-40 sm:hidden block'>
+         <div className='bg-[#0E2E2E] text-white shadow-md transition-all duration-300 fixed top-16 h-screen w-64 z-40 sm:hidden block'>
       
     {nav_links.map((link) => (
    <NavLink
@@ -83,7 +83,7 @@ const handleLogout = async ()=>{
     <span className="ml-3">Logout</span>
   </button>
 
-      <div className='absolute bottom-10 left-0 border-t border-[#44E5E7]/20'>
+      <div className='absolute bottom-20 left-0 border-t border-[#44E5E7]/20'>
           <UserProfile />
       </div>
     </div>

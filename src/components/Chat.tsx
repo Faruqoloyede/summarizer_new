@@ -73,12 +73,9 @@ export default function Chat() {
           {messages.length === 0 ? (
             <div className="flex flex-1 items-center justify-center">
               <div className="text-center">
-                <h1 className="text-4xl font-bold text-white">
-                  Hey {username} 👋
-                </h1>
-
+            
                 <p className="mt-3 text-lg text-gray-400">
-                  What do you want to summarize today?
+                  {`Hey ${username} What do you want to summarize today?`}
                 </p>
               </div>
             </div>
