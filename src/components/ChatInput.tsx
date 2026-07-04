@@ -95,7 +95,7 @@ export default function ChatInput({
         ref={textareaRef}
         rows={1}
         value={text}
-        placeholder="Message ChatGPT..."
+        placeholder="Ask Summerizer to summarize, explain, or extract key points..."
         onChange={(e) => {
           setText(e.target.value);
           resize();
