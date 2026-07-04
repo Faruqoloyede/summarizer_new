@@ -4,6 +4,8 @@ import {
   useRef,
   useState,
 } from "react";
+import { FaArrowUpLong } from "react-icons/fa6";
+import { MdOutlineAttachFile } from "react-icons/md";
 
 interface Props {
   onSend: (
@@ -75,14 +77,14 @@ export default function ChatInput({
         <div className="mb-3 flex items-center justify-between rounded-xl bg-neutral-800 p-3 text-white">
 
           <span className="truncate">
-            📎 {file.name}
+            {file.name}
           </span>
 
           <button
             onClick={() =>
               setFile(null)
             }
-            className="text-red-400"
+            className="text-white"
           >
             ✕
           </button>
@@ -117,9 +119,9 @@ export default function ChatInput({
             onClick={() =>
               fileInput.current?.click()
             }
-            className="rounded-full p-2 text-white transition hover:bg-neutral-700"
+            className="rounded-full p-2 bg-[#2f2f2f] text-white transition hover:bg-neutral-700"
           >
-            📎
+            <MdOutlineAttachFile />
           </button>
 
         </div>
@@ -127,9 +129,9 @@ export default function ChatInput({
         <button
           onClick={send}
           disabled={!text.trim() && !file}
-          className="rounded-full bg-white p-3 text-black transition disabled:cursor-not-allowed disabled:opacity-40"
+          className="rounded-full bg-[#2f2f2f] text-white p-3 transition disabled:cursor-not-allowed disabled:opacity-40"
         >
-          ↑
+          <FaArrowUpLong />
         </button>
       </div>
     </div>

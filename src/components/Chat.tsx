@@ -60,7 +60,7 @@ export default function Chat() {
       {
         id: Date.now() + 1,
         role: "assistant",
-        content: "This is where your AI response will appear.",
+        content: "Good morning! How can I assist you today?",
       },
     ]);
   };
